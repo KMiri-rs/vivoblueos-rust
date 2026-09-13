@@ -55,6 +55,7 @@ cfg_select! {
         target_os = "l4re",
         target_os = "nto",
         target_os = "qnx",
+        target_os = "blueos",
     ) => {
         mod unix_legacy;
         pub use unix_legacy::fill_bytes;

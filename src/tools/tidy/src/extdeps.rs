@@ -11,6 +11,12 @@ const ALLOWED_SOURCES: &[&str] = &[
     r#""registry+https://github.com/rust-lang/crates.io-index""#,
     // This is `rust_team_data` used by `site` in src/tools/rustc-perf,
     r#""git+https://github.com/rust-lang/team#db2c1ed9fbc0216e533db954cd249045c01c7406""#,
+    r#""git+https://github.com/rust-lang/team#a5260e76d3aa894c64c56e6ddc8545b9a98043ec""#,
+    // BlueOS forks of cc-rs and libc, patched via git in library/Cargo.toml
+    // and src/bootstrap/Cargo.toml.
+    // r#""git+https://github.com/vivoblueos/cc-rs?branch=v1.2.28#a6a2b5ec11fd25437781d12b7d7c882427ae9875""#,
+    r#""git+https://github.com/KMiri-rs/vivoblueos-cc-rs?branch=kmiri#414a538832c8956e71f2135c80c40b88869587d4""#,
+    r#""git+https://github.com/vivoblueos/libc?branch=v0.2.183#4730ac35f63c2819f12200b0e76b84bb6c539df8""#,
 ];
 
 /// Checks for external package sources. `root` is the path to the directory that contains the
