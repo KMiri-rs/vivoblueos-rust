@@ -2321,7 +2321,7 @@ checksum = "803ec87c9cfb29b9d2633f20cba1f488db3fd53f2158b1024cbefb47ba05d413"
 [[package]]
 name = "libc"
 version = "0.2.183"
-source = "git+https://github.com/vivoblueos/libc?branch=blueos-dev#0ce164851406cbffc0020190f746fa7818173ac9"
+source = "git+https://github.com/vivoblueos/libc?branch=v0.2.183#4730ac35f63c2819f12200b0e76b84bb6c539df8"
 
 [[package]]
 name = "libffi"
