@@ -383,7 +383,7 @@ pub fn current_exe() -> io::Result<PathBuf> {
     path.canonicalize()
 }
 
-#[cfg(any(target_os = "espidf", target_os = "horizon", target_os = "vita"))]
+#[cfg(any(target_os = "espidf", target_os = "horizon", target_os = "vita", target_os = "blueos"))]
 pub fn current_exe() -> io::Result<PathBuf> {
     crate::sys::pal::unsupported::unsupported()
 }
@@ -443,6 +443,7 @@ pub fn home_dir() -> Option<PathBuf> {
         target_os = "vita",
         target_os = "nuttx",
         all(target_vendor = "apple", not(target_os = "macos")),
+        target_os = "blueos",
     ))]
     unsafe fn fallback() -> Option<OsString> {
         None
@@ -457,6 +458,7 @@ pub fn home_dir() -> Option<PathBuf> {
         target_os = "vita",
         target_os = "nuttx",
         all(target_vendor = "apple", not(target_os = "macos")),
+        target_os = "blueos",
     )))]
     unsafe fn fallback() -> Option<OsString> {
         let amt = match libc::sysconf(libc::_SC_GETPW_R_SIZE_MAX) {

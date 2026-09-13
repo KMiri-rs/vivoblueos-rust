@@ -88,3 +88,8 @@ rustc-std-workspace-std = { path = 'rustc-std-workspace-std' }
 
 # See comments in `library/windows-sys/Cargo.toml` for why this is patched
 windows-sys = { path = 'windows-sys' }
+
+# BlueOS forks: add custom target support (BlueOS libc and cc-rs patches).
+# These must be kept in sync with each other and with the target specs.
+libc = { git = "https://github.com/vivoblueos/libc", branch = "blueos-dev", version = "=0.2.162" }
+cc = { git = "https://github.com/vivoblueos/cc-rs", branch = "blueos-dev", version = "=1.1.22" }

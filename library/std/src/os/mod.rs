@@ -87,6 +87,8 @@ mod net;
 pub mod aix;
 #[cfg(target_os = "android")]
 pub mod android;
+#[cfg(target_os = "blueos")]
+pub mod blueos;
 #[cfg(target_os = "cygwin")]
 pub mod cygwin;
 #[cfg(target_os = "dragonfly")]

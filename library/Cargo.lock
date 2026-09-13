@@ -40,9 +40,9 @@ dependencies = [
 
 [[package]]
 name = "cc"
-version = "1.2.0"
+version = "1.2.28"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1aeb932158bd710538c73702db6945cb68a8fb08c519e6e12706b94263b36db8"
+checksum = "4ad45f4f74e4e20eaa392913b7b33a7091c87e59628f4dd27888205ad888843c"
 dependencies = [
  "shlex",
 ]
@@ -456,3 +456,13 @@ dependencies = [
  "rustc-std-workspace-alloc",
  "rustc-std-workspace-core",
 ]
+
+[[patch.unused]]
+name = "cc"
+version = "1.1.22"
+source = "git+https://github.com/vivoblueos/cc-rs?branch=blueos-dev#f158c93890c8b6c186a8c5658fa12dfe2cf2b81e"
+
+[[patch.unused]]
+name = "libc"
+version = "0.2.162"
+source = "git+https://github.com/vivoblueos/libc?branch=blueos-dev#1c7c604cb162ca0e40ca2b9696253b621789fc6f"

@@ -77,7 +77,7 @@ pub unsafe fn realloc(ptr: *mut u8, layout: Layout, new_size: usize) -> *mut u8 
 cfg_select! {
     // We use posix_memalign wherever possible, but some targets have very incomplete POSIX coverage
     // so we need a fallback for those.
-    any(target_os = "horizon", target_os = "vita") => {
+    any(target_os = "horizon", target_os = "vita", target_os = "blueos") => {
         #[inline]
         unsafe fn aligned_malloc(layout: &Layout) -> *mut u8 {
             unsafe { libc::memalign(layout.align(), layout.size()) as *mut u8 }
